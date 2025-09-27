@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bigdev | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #111827, #0d0d0d);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #d1d5db;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .neon-text {
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Header / Hero -->
+  <header class="h-screen flex flex-col justify-center items-center text-center" data-aos="zoom-in">
+    <h1 class="text-6xl font-extrabold neon-text">Bigdev</h1>
+    <p class="mt-4 text-lg text-gray-300">Web Developer | Tech Enthusiast</p>
+    <a href="#projects" 
+       class="mt-8 px-6 py-3 rounded-lg font-bold bg-cyan-400 text-black 
+              shadow-[0_0_20px_#00f7ff] hover:shadow-[0_0_40px_#ff00ff] 
+              hover:scale-110 transform transition duration-300"
+       data-aos="fade-up" data-aos-delay="300">
+      🚀 Explore My Work
+    </a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 md:px-20 bg-[#111827] text-center" data-aos="fade-right">
+    <h2 class="text-4xl neon-text font-bold mb-6">About Me</h2>
+    <p class="max-w-3xl mx-auto text-gray-300 leading-relaxed">
+      I am BIG E for shorts, wishing to become a passionate Computer Scientist, and Web Developer. 
+      I specialize in building modern, responsive, and futuristic websites 
+      with clean code and creative designs. My mission is to bring ideas 
+      to life on the web while pushing the limits of technology.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 md:px-20">
+    <h2 class="text-4xl neon-text font-bold text-center mb-10" data-aos="fade-up">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Project Card -->
+      <div class="bg-[#1a1a1a] border border-cyan-400 rounded-xl p-6 
+                  shadow-[0_0_20px_#00f7ff] hover:scale-105 hover:shadow-[0_0_40px_#ff00ff]
+                  transition duration-500"
+           data-aos="flip-left">
+        <h3 class="text-xl text-cyan-400 font-bold mb-2">Neon UI Website</h3>
+        <p class="text-gray-400">A futuristic landing page with glowing effects and responsive design.</p>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-[#1a1a1a] border border-cyan-400 rounded-xl p-6 
+                  shadow-[0_0_20px_#00f7ff] hover:scale-105 hover:shadow-[0_0_40px_#ff00ff]
+                  transition duration-500"
+           data-aos="flip-left" data-aos-delay="200">
+        <h3 class="text-xl text-cyan-400 font-bold mb-2">Portfolio V2</h3>
+        <p class="text-gray-400">A modern personal portfolio with animations and dark mode toggle.</p>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-[#1a1a1a] border border-cyan-400 rounded-xl p-6 
+                  shadow-[0_0_20px_#00f7ff] hover:scale-105 hover:shadow-[0_0_40px_#ff00ff]
+                  transition duration-500"
+           data-aos="flip-left" data-aos-delay="400">
+        <h3 class="text-xl text-cyan-400 font-bold mb-2">AI Integration</h3>
+        <p class="text-gray-400">A web app enhanced with AI features for smarter user experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 md:px-20 bg-[#111827] text-center" data-aos="fade-up">
+    <h2 class="text-4xl neon-text font-bold mb-6">Contact Me</h2>
+    <p class="text-gray-300 mb-6">Let’s collaborate or talk about tech ideas!</p>
+    <a href="mailto:ojetadeoluwakayode@gmail.com" 
+       class="px-6 py-3 rounded-lg font-bold bg-pink-500 text-white 
+              shadow-[0_0_20px_#ff00ff] hover:shadow-[0_0_40px_#00f7ff] 
+              hover:scale-110 transform transition duration-300"
+       data-aos="zoom-in">
+      📧 Email Me
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm" data-aos="fade-in">
+    © 2025 Bigdev | Built with 💻 and ⚡ Neon Vibes
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,   // animation duration
+      once: true        // whether animation should happen only once
+    });
+  </script>
+
+</body>
+</html>
