@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ojetadeoluwakayode-jpg/portfolio-website/issues"
   },
-  "homepage": "https://github.com/ojetadeoluwakayode-jpg/portfolio-website#readme"
+  "homepage": "https://github.com/ojetadeoluwakayode-jpg/portfolio-website#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "fontmin": "^1.1.1",
+    "tailwindcss": "^4.1.13"
+  }
 }
