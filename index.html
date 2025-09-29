@@ -31,6 +31,16 @@
   </style>
 </head>
 <body class="overflow-x-hidden">
+    <!-- Preloader Screen -->
+<div id="preloader" class="fixed inset-0 flex flex-col items-center justify-center bg-gray-900 text-cyan-400 z-50">
+  <!-- Your Name / Logo -->
+  <h1 class="text-4xl font-extrabold mb-4 
+             drop-shadow-[0_0_10px_#00ffff,0_0_20px_#00ffff,0_0_40px_#00ffff]">
+    Bigdev
+  </h1>
+  <!-- Percentage Counter -->
+  <p id="loading-text" class="text-2xl font-bold animate-pulse">0%</p>
+</div>
 
   <!-- Header / Hero -->
   <header class="h-screen flex flex-col justify-center items-center text-center" data-aos="zoom-in">
@@ -112,6 +122,7 @@
       name="contact" 
       method="POST" 
       data-netlify="true"
+      
       class="p-6 rounded-xl bg-gray-800 border border-gray-700 
              shadow-[0_0_20px_rgba(0,255,255,0.3)] 
              animate-[pulse_3s_ease-in-out_infinite]"
@@ -174,7 +185,27 @@
       duration: 1000,   // animation duration
       once: true        // whether animation should happen only once
     });
+    let progress = 0;
+    const preloader = document.getElementById("preloader");
+    const content = document.getElementById("content");
+    const loadingText = document.getElementById("loading-text");
     
+  // Fake loading progress
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 10) + 5; // step between 5-15%
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+
+        // Fade out preloader
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+          content.classList.remove("hidden");
+        }, 600);
+      }
+      loadingText.textContent = progress + "%";
+    }, 200);
   </script>
 
 </body>
